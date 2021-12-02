@@ -1,5 +1,4 @@
 import React from "react";
-// import the react library to write JSX
 
 const NameTag = (props) => (
   <div className="name-tag">
@@ -10,5 +9,3 @@ const NameTag = (props) => (
 );
 
 export default NameTag;
-/* export our functional component definition to be 
-imported then rendered within another module */
