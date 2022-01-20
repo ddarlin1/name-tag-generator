@@ -4,7 +4,7 @@ import UserInput from "./UserInput.js";
 
 class App extends Component {
   state = {
-    names: ["Dani", "Quinn", "Fern", "Flo", "Magda", "Daniel"]
+    names: ["Dani"]
   };
   removeName = (clickedIndex) => {
     const filterCallback = (_, index) => index !== clickedIndex;
@@ -16,6 +16,20 @@ class App extends Component {
     // new name will be listed first
     this.setState({ names: newNames });
   };
+
+  componentDidUpdate() {
+    const savedNamesString = JSON.stringify(this.state.names);
+    localStorage.setItem("savedNames", savedNamesString);
+  }
+
+  componentDidMount() {
+    const savedNamesString = localStorage.getItem("savedNames");
+    if (savedNamesString) {
+      const savedNames = JSON.parse(savedNamesString);
+      this.setState({ names: savedNames });
+    }
+  }
+
   render() {
     return (
       <div className="App">
