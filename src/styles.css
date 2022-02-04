@@ -13,6 +13,30 @@ input[type='text'] {
   width: 200px;
 }
 
+.new-name {
+  background-color: #e0ddd5;
+  border-radius: 10px;
+  border: none;
+  margin: 5px;
+  padding: 10px;
+}
+.new-name:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.create-tag {
+  background-color: red;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 10px;
+}
+.create-tag:hover {
+  background-color: hsl(0, 25%, 50%);
+  cursor: pointer;
+}
+
+/* Name Tag */
 .name-tag {
   background-color: red;
   padding: 10px 0 20px;
@@ -21,6 +45,7 @@ input[type='text'] {
   margin: 20px 10px;
   display: inline-block;
   position: relative;
+  box-shadow: 1px 10px 10px hsl(230, 25%, 50%);
 }
 .title {
   color: white;

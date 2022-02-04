@@ -4,7 +4,7 @@ import UserInput from "./UserInput.js";
 
 class App extends Component {
   state = {
-    names: ["Dani"]
+    names: []
   };
   removeName = (clickedIndex) => {
     const filterCallback = (_, index) => index !== clickedIndex;
